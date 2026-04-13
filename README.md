@@ -50,7 +50,7 @@ QuizMatrix is a **modern, hacker-themed quiz web application** built using **HTM
 ### 🧠 Quiz Engine
 
 * Category-wise and difficulty-based questions
-* Dummy questions stored in **JavaScript/PHP arrays**
+* Dummy questions stored in **JavaScript arrays**
 * Multiple Choice Questions (MCQs)
 * Optional timer and progress tracking
 
@@ -95,7 +95,7 @@ QuizMatrix is a **modern, hacker-themed quiz web application** built using **HTM
 * HTML5 – Structure
 * CSS3 – Styling & animations (Neon UI)
 * JavaScript (Vanilla) – Logic & interactivity
-* PHP – Optional routing/structure
+* PHP – Page handling / routing
 * LocalStorage – Data persistence (No database)
 
 ---
@@ -104,16 +104,43 @@ QuizMatrix is a **modern, hacker-themed quiz web application** built using **HTM
 
 ```
 QuizMatrix/
-│── index.php
-│── intro.html
-│── style.css
-│── script.js
-│── quiz.js
-│── assets/
-│   ├── images/
-│   ├── icons/
-│── README.md
+│
+├── hub.php
+├── index.php
+├── quiz.php
+├── result.php
+├── review.php
+│
+└── assets/
+    ├── css/
+    │   └── style.css
+    │
+    └── js/
+        ├── effects.js
+        ├── questions.js
+        └── quiz.js
 ```
+
+---
+
+## 📌 File Description
+
+### 🔹 Core Pages
+
+* **index.php** → Entry page (user input / landing after intro)
+* **hub.php** → Category, difficulty & question selection dashboard
+* **quiz.php** → Quiz interface (questions + navigation)
+* **result.php** → Displays score and performance summary
+* **review.php** → Detailed answer analysis (correct vs incorrect)
+
+---
+
+### 🔹 Assets
+
+* **assets/css/style.css** → Main styling (dark neon hacker theme)
+* **assets/js/effects.js** → UI animations & visual effects
+* **assets/js/questions.js** → All quiz questions (category + difficulty based)
+* **assets/js/quiz.js** → Quiz logic (timer, scoring, navigation)
 
 ---
 
@@ -123,21 +150,27 @@ QuizMatrix/
 
 1. Install XAMPP
 2. Move the project folder to:
+
+   ```
    C:\xampp\htdocs\
+   ```
 3. Start Apache server from XAMPP Control Panel
 4. Open browser and go to:
+
+   ```
    http://localhost/QuizMatrix/
+   ```
 
 ---
 
 ### 💻 Method 2: Direct Run (Without PHP features)
 
 1. Open project folder
-2. Run `intro.html` directly in browser
+2. Run `index.php` using a local server OR open in browser (limited functionality)
 3. Note:
 
-   * PHP features won’t work
-   * JS-based features will run normally
+   * PHP routing may not work properly
+   * JavaScript-based quiz features will still run
 
 ---
 
@@ -168,7 +201,7 @@ QuizMatrix/
 
 ## 👨‍💻 Author
 
-SAMARESH DEBNATH (QuizMatrix Developer)
+**Samaresh Debnath (QuizMatrix Developer)**
 
 * Passionate about Cybersecurity & Development
 * Focused on building modern, interactive web apps
